@@ -14,5 +14,10 @@ import {
     const newTaskForm = document.querySelector('[data-new-task-form]');
     const newTaskInput = document.querySelector('[data-new-task-input]');
     const clearCompleteTasksButton = document.querySelector('[data-clear-complete-tasks-button]');
-    
+
+    function save() {
+        localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(lists));
+        localStorage.setItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY, selectedListId);
+      }
+
   }

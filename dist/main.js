@@ -56,7 +56,27 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://webpackk/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n\r\n\n\n//# sourceURL=webpack://webpackk/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/logic.js":
+/*!**********************!*\
+  !*** ./src/logic.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createList\": () => (/* binding */ createList),\n/* harmony export */   \"createTask\": () => (/* binding */ createTask),\n/* harmony export */   \"clearElement\": () => (/* binding */ clearElement),\n/* harmony export */   \"renderTaskCount\": () => (/* binding */ renderTaskCount)\n/* harmony export */ });\nconst listCountElement = document.querySelector('[data-list-count]');\r\n\r\nfunction createList(name) {\r\n  return { id: Date.now().toString(), name, tasks: [] };\r\n}\r\nfunction createTask(name) {\r\n    return { id: Date.now().toString(), name, complete: false };\r\n  }\r\n\r\n  function clearElement(element) {\r\n    while (element.firstChild) {\r\n      element.removeChild(element.firstChild);\r\n    }\r\n  }\r\n\r\n  function renderTaskCount(selectedListId) {\r\n    const incompleteTaskCount = selectedListId.tasks.filter((task) => !task.complete).length;\r\n    const taskString = incompleteTaskCount === 1 ? 'task' : 'tasks';\r\n    listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`;\r\n  }\r\n\r\n  \r\n  \r\n  \n\n//# sourceURL=webpack://webpackk/./src/logic.js?");
+
+/***/ }),
+
+/***/ "./src/project.js":
+/*!************************!*\
+  !*** ./src/project.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logic */ \"./src/logic.js\");\n\n\n//# sourceURL=webpack://webpackk/./src/project.js?");
 
 /***/ })
 
