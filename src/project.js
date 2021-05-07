@@ -14,4 +14,5 @@ import {
     const newTaskForm = document.querySelector('[data-new-task-form]');
     const newTaskInput = document.querySelector('[data-new-task-input]');
     const clearCompleteTasksButton = document.querySelector('[data-clear-complete-tasks-button]');
+    
   }
