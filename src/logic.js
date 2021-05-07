@@ -18,5 +18,9 @@ function createTask(name) {
     const taskString = incompleteTaskCount === 1 ? 'task' : 'tasks';
     listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`;
   }
+
+  export {
+    createList, createTask, clearElement, renderTaskCount,
+  };
   
   
