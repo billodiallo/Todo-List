@@ -12,4 +12,11 @@ function createTask(name) {
       element.removeChild(element.firstChild);
     }
   }
+
+  function renderTaskCount(selectedListId) {
+    const incompleteTaskCount = selectedListId.tasks.filter((task) => !task.complete).length;
+    const taskString = incompleteTaskCount === 1 ? 'task' : 'tasks';
+    listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`;
+  }
+  
   
