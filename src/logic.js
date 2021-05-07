@@ -6,4 +6,10 @@ function createList(name) {
 function createTask(name) {
     return { id: Date.now().toString(), name, complete: false };
   }
+
+  function clearElement(element) {
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
   
