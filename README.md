@@ -11,7 +11,7 @@ A Restaurant page built with JavaScript that contains the home page, menu page, 
 
 
 
-[Live Demo Link](https://billodiallo.github.io/Restaurant_page/)
+[Live Demo Link]()
 
 ## Built With
 
@@ -32,7 +32,7 @@ To get this project up and running locally, you must follow the steps from the [
 
 **Step 1**<br>
 Navigate through the local folder where you want to clone the repository and run<br>
-git clone `https://github.com/billodiallo/Restaurant_page.git`. It will clone the repo to your local folder.<br>
+git clone `https://github.com/billodiallo/Todo-List.git`. It will clone the repo to your local folder.<br>
 
 **Step 2**<br>
 - Cd inside the project
