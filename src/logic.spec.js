@@ -7,3 +7,7 @@ test('Check name', () => {
 test('Check negative scenario', () => {
   expect(createTask('bb').complete).toBe(false);
 });
+
+test('Check complete', () => {
+    expect(createTask('billo').complete).not.toBe(true);
+  });
