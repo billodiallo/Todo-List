@@ -8,6 +8,14 @@ test('Check negative scenario', () => {
   expect(createTask('bb').complete).toBe(false);
 });
 
-test('Check complete', () => {
-    expect(createTask('billo').complete).not.toBe(true);
+test('Check createlist name', () => {
+    expect(createList('billo').name).toBe('billo');
+  });
+
+  test('Check createlist task', () => {
+    expect(createList('billo').tasks).toStrictEqual([]);
+  });
+
+  test('Check createlist id', () => {
+    expect(createList('billo').id).not.toBe(null);
   });
