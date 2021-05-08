@@ -9,13 +9,29 @@ test('Check negative scenario', () => {
 });
 
 test('Check createlist name', () => {
-    expect(createList('billo').name).toBe('billo');
-  });
+  expect(createList('billo').name).toBe('billo');
+});
 
-  test('Check createlist task', () => {
-    expect(createList('billo').tasks).toStrictEqual([]);
-  });
+test('Check createlist task', () => {
+  expect(createList('billo').tasks).toStrictEqual([]);
+});
 
-  test('Check createlist id', () => {
-    expect(createList('billo').id).not.toBe(null);
-  });
+test('Check createlist id', () => {
+  expect(createList('billo').id).not.toBe(null);
+});
+
+test('Check createlist id string', () => {
+  expect(typeof (createList('billo').id)).toBe('string');
+});
+
+test('Check createlist id', () => {
+  expect(createTask('billo').id).not.toBe(null);
+});
+
+test('Check createlist id string', () => {
+  expect(typeof (createTask('billo').id)).toBe('string');
+});
+
+test('Check clear element', () => {
+  expect(clearElement('listsContainer')).toBe(undefined);
+});
