@@ -2,7 +2,7 @@
 
 # TO DO LIST 
 
-A Restaurant page built with JavaScript that contains the home page, menu page, and contact page.
+A simple TODO app can be used to follow the scheduled tasks for your projects.
 
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
@@ -21,6 +21,8 @@ A Restaurant page built with JavaScript that contains the home page, menu page, 
 - HTML/CSS
 - Github Actions
 - Bootstrap
+- Stylelint
+- css-loader
 
 ## Prerequisities
 
