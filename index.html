@@ -1,85 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet" />
-    <title>To do List</title>
+  <meta charset=UTF-8>
+  <meta http-equiv=X-UA-Compatible content=IE=edge>
+  <meta name=viewport content=width=device-width, initial-scale=1.0>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Todo-List</title>
 </head>
 
 <body>
-    <h1 class="title">Projects</h1>
-    <div class="all-tasks">
-        <h2 class="task-list-title">My Projects</h2>
-        <ul class="task-list" data-lists></ul>
-  
-        <form action="" data-new-list-form>
-          <input 
-            type="text"
-            class="new list"
-            data-new-list-input
-            placeholder="new list name"
-            aria-label="new list name"
-          />
-          <button class="btn create" aria-label="create new list">+</button>
-        </form>
+  <main class="container p-5 main">
+    <h1 class="text-center mb-5">Todo-List Project</h1>
+    <nav class="main__nav mb-5">
+      <button id="addTaskButton" class="main__button btn btn-outline-success">Add a Task</button>
+      <button id="addProjectButton" class="main__button btn btn-outline-primary">Add a Project</button>
+      <button id="showProjects" class="main__button btn btn-outline-info">Show Projects</button>
+    </nav>
+    <div id="addProjectForm" action="#" class="row border rounded px-4 py-5 mb-3 hide">
+      <div class="col-12">
+        <h2 class="mb-4">Add a Project</h2>
       </div>
-
-      <div class="todo-list" data-list-display-container>
-        <div class="todo-header">
-          <h2 class="list-title" data-list-title>Add new Project</h2>
-          <p class="task-count" data-list-count>0 Tasks remaining</p>
-        </div>
-
-        <div class="todo-body">
-            <div class="tasks" data-tasks></div>
-    
-            <div class="new-task-creator">
-                <form action="" data-new-task-form>
-                    <input 
-                      type="text"
-                      data-new-task-input
-                      class="new task"
-                      placeholder="new task name"
-                      aria-label="new task name"
-                    />
-                    <button class="btn create" aria-label="create new task">+</button>
-                  </form>
-            </div>
-
-            <div class="delete-items">
-                <button class="btn delete" data-clear-complete-tasks-button>Clear Closing Tasks</button>
-                <button class="btn delete" data-delete-list-button>Delete List</button>
-              </div>
-            </div>
-          </div>
-      
-         
-          </div>
-
-
-          <template id="task-template">
-            <div class="task">
-              <input type="checkbox" />
-              <label>
-                <span class="custom-checkbox"></span>
-              </label>
-            </div>
-          </template>
-
-
-
-
-
-
-
-
-    <script src="main.js"></script>
+      <div class="col-12 mb-3">
+        <label class="form-label" for="projectTitle">Title</label>
+        <input class="form-control" type="text" id="projectTitle" required>
+      </div>
+      <div class="col-12">
+        <button id="projectSubmit" class="form__submit btn btn-lg btn-outline-success w-100">Submit Project</button>
+      </div>
+    </div>
+    <div id="addTaskForm" action="#" class="row border rounded px-4 py-5 hide">
+      <div class="col-12">
+        <h2 class="form__title mb-4">Add a Task</h2>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" data-type="in" required>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="desciption">Description</label>
+        <input class="form-control" type="text" id="decription" data-type="in">
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="dueDate">Due date</label>
+        <input class="form-control" type="date" id="dueDate" data-type="in" required>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <label class="form-label" for="priority">Priority</label>
+        <select class="form-select" name="priority" id="priority" data-type="in" required>
+          <option value="2">High</option>
+          <option value="1">Medium</option>
+          <option value="0">Low</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-12 col-xl-6 mb-3">
+        <label class="form-label" for="Project">Project</label>
+        <select class="form-select" name="project" id="project" data-type="in" required>
+          
+        </select>
+      </div>
+      <div class="col-12">
+        <button id="formSubmit" class="form__submit btn btn-lg btn-outline-success w-100 mt-5">Submit Task</button>
+      </div>
+    </div>
+    <div id="editTaskForm" action="#" class="row border rounded px-4 py-5 hide">
+      <div class="col-12">
+        <h2 class="form__title mb-4">Edit Task</h2>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="editTitle" data-type="out" required>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="desciption">Description</label>
+        <input class="form-control" type="text" id="editDecription" data-type="out">
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 mb-3">
+        <label class="form-label" for="dueDate">Due date</label>
+        <input class="form-control" type="date" id="editDueDate" data-type="out" required>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <label class="form-label" for="priority">Priority</label>
+        <select class="form-select" name="priority" id="editPriority" data-type="out" required>
+          <option value="2">High</option>
+          <option value="1">Medium</option>
+          <option value="0">Low</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-12 col-xl-6 mb-3">
+        <label class="form-label" for="Project">Project</label>
+        <select class="form-select" name="project" id="editProject" data-type="out" required>
+        </select>
+      </div>
+      <div class="col-12">
+        <button id="formSave" class="form__submit btn btn-lg btn-outline-success w-100 mt-5">Save changes</button>
+      </div>
+    </div>
+    <div class="col-12 mt-5 mx-auto border rounded px-4 py-5 projectsSection hide">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Action</th>
+            <th scope="col">Tasks</th>
+          </tr>
+        </thead>
+        <tbody class="projectsTable">
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 mt-5 mx-auto border rounded px-4 py-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Project</th>
+            <th scope="col">Done</th>
+            <th scope="col" colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody class="taskTable">
+          
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src='./main.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
