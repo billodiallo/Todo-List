@@ -8,7 +8,7 @@ A simple TODO app can be used to follow the scheduled tasks for your projects.
 
 
 ## Screenshots of the app.
-![todo2](https://user-images.githubusercontent.com/11162987/117532827-2b664080-aff2-11eb-9c42-336f79b7b9c7.JPG)
+![todo2]()
 
 
 [Live Demo Link](https://billodiallo.github.io/Todo-List/)
