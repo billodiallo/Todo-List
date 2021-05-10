@@ -1,7 +1,5 @@
 import { jest } from '@jest/globals';
-import * as utility from '../src/utility';
-
-/* eslint linebreak-style: ["error", "windows"] */
+import * as utility from './utility';
 
 describe('toggleShowElement', () => {
   const mockElement = {
