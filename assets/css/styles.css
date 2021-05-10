@@ -1,0 +1,11 @@
+.container.main {
+  background-color: aliceblue;
+}
+
+.hide {
+  display: none;
+}
+
+.edit__button {
+  padding: 0 1.5em !important;
+}
