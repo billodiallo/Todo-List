@@ -35,3 +35,4 @@ describe('format Props', () => {
     expect(myTodo.formatProps()).toEqual(['myTodoTitle', 'myDescription', '2021-05-17', 'Medium', 'myTitle']);
   });
 });
+
