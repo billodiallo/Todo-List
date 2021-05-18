@@ -18,5 +18,4 @@ describe('add todo', () => {
     myProject.addTodo('todoObject');
     expect(myProject.content).toContain('todoObject');
   });
-
 });
