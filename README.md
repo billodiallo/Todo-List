@@ -28,6 +28,7 @@ A simple TODO app can be used to follow the scheduled tasks for your projects.
 - Bootstrap
 - Stylelint
 - css-loader
+- install jest
 
 ## Prerequisities
 
