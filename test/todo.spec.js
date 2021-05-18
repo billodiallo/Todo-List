@@ -20,3 +20,12 @@ describe('change attr', () => {
         expect(myTodo.date).toBe('2021-05-28');
       });
 });  
+
+const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-04-21', 1, 0);
+
+describe('find Props', () => {
+  test('it returns an array with the instance values', () => {
+    expect(myTodo.findProps()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, 1, false]);
+  });
+});
+});
