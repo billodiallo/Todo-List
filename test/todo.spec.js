@@ -9,4 +9,14 @@ describe('change attr', () => {
       myTodo.changeAttr('title', 'myTodoNewTitle');
       expect(myTodo.title).toBe('myTodoNewTitle');
     });
+
+    test('it change the description when given "description" as an argument and a new description', () => {
+        myTodo.changeAttr('description', 'myNewDescription');
+        expect(myTodo.description).toBe('myNewDescription');
+      });
+    
+      test('it change the date when given "date" as an argument and a new date', () => {
+        myTodo.changeAttr('date', '2021-05-28');
+        expect(myTodo.date).toBe('2021-05-28');
+      });
 });  
