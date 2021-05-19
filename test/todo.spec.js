@@ -1,12 +1,12 @@
 import Todo from '../src/todo';
 import Project from '../src/project';
-// import addToproject from '../src/todo'
 
 /* eslint-disable no-unused-vars */
 const myProject = new Project('myTitle');
 /* eslint-enable no-unused-vars */
+
 describe('change attr', () => {
-  const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-05-06', 1, 0);
+  const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-04-21', 1, 0);
 
   test('it change the title when given "title" as an argument and a new title', () => {
     myTodo.changeAttr('title', 'myTodoNewTitle');
@@ -25,20 +25,15 @@ describe('change attr', () => {
 });
 
 const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-04-21', 1, 0);
+
 describe('find Props', () => {
   test('it returns an array with the instance values', () => {
     expect(myTodo.findProps()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, 1, false]);
   });
 });
 
-describe('add to project', () => {
+describe('format Props', () => {
   test('it returns an array with the instance values formatted', () => {
-    expect(myTodo.addToProject()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, false]);
-  });
-});
-
-describe('edit project', () => {
-  test('it test edit project ', () => {
-    expect(myTodo.editTask()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, 1, false]);
+    expect(myTodo.formatProps()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 'Medium', 'myTitle']);
   });
 });
