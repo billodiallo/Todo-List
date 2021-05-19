@@ -1,5 +1,6 @@
 import Todo from '../src/todo';
 import Project from '../src/project';
+// import addToproject from '../src/todo'
 
 /* eslint-disable no-unused-vars */
 const myProject = new Project('myTitle');
@@ -23,16 +24,21 @@ describe('change attr', () => {
   });
 });
 
-const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-05-17', 1, 0);
-
+const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-04-21', 1, 0);
 describe('find Props', () => {
   test('it returns an array with the instance values', () => {
-    expect(myTodo.findProps()).toEqual(['myTodoTitle', 'myDescription', '2021-05-17', 1, 0, 1, false]);
+    expect(myTodo.findProps()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, 1, false]);
   });
 });
 
-describe('format Props', () => {
+describe('add to project', () => {
   test('it returns an array with the instance values formatted', () => {
-    expect(myTodo.formatProps()).toEqual(['myTodoTitle', 'myDescription', '2021-05-17', 'Medium', 'myTitle']);
+    expect(myTodo.addToProject()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, false]);
+  });
+});
+
+describe('edit project', () => {
+  test('it test edit project ', () => {
+    expect(myTodo.editTask()).toEqual(['myTodoTitle', 'myDescription', '2021-04-21', 1, 0, 1, false]);
   });
 });
