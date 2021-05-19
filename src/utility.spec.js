@@ -1,9 +1,10 @@
 import { jest } from '@jest/globals';
 import * as utility from './utility';
-// import Todo from './todo';
+import Todo from './todo';
 // import * as setInititalData  from './events';
 import findTaskInputs from './utility';
 
+// eslint-disable-next-line no-undef
 const myTodo = new Todo('myTodoTitle', 'myDescription', '2021-05-06', 1, 0);
 describe('toggleShowElement', () => {
   const mockElement = {
@@ -21,7 +22,6 @@ describe('toggleShowElement', () => {
 describe('find input', () => {
   it('should show main list "', () => {
     const find1 = document.querySelectorAll('[data-type="in"]');
-    // utility.findTaskInputs(mockElement1);
     expect(findTaskInputs()).toEqual(find1);
   });
 });
@@ -53,6 +53,7 @@ describe('show Project', () => {
 });
 
 describe('present Project ', () => {
+  // eslint-disable-next-line no-unused-vars
   const table = document.querySelector('.projectsTable');
   expect(myTodo1.presentProject().id).toEqual([('myTodoTitle', 'myDescription', '2021-05-06', 1, 0)]);
 });

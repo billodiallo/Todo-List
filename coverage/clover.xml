@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621418414382" clover="3.2.0">
-  <project timestamp="1621418414382" name="All files">
+<coverage generated="1621421842231" clover="3.2.0">
+  <project timestamp="1621421842231" name="All files">
     <metrics statements="197" coveredstatements="64" conditionals="14" coveredconditionals="2" methods="47" coveredmethods="12" elements="258" coveredelements="78" complexity="0" loc="197" ncloc="197" packages="1" files="3" classes="3"/>
     <file name="project.js" path="C:\Users\Admin\Documents\CLONEDOCS\bida\Todo-List\src\project.js">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
