@@ -8,7 +8,12 @@ A simple TODO app can be used to follow the scheduled tasks for your projects.
 
 
 ## Screenshots of the app.
-![todo2]()
+
+![todo2](https://user-images.githubusercontent.com/11162987/118632022-b4daf700-b7d8-11eb-9c64-cdb8079c79ac.JPG)
+
+## Test with Jest .
+![image](https://user-images.githubusercontent.com/11162987/118631555-45fd9e00-b7d8-11eb-8459-1d08d6386ced.png)
+
 
 
 [Live Demo Link](https://billodiallo.github.io/Todo-List/)
@@ -23,6 +28,7 @@ A simple TODO app can be used to follow the scheduled tasks for your projects.
 - Bootstrap
 - Stylelint
 - css-loader
+- install jest
 
 ## Prerequisities
 
@@ -42,6 +48,17 @@ git clone `https://github.com/billodiallo/Todo-List.git`. It will clone the repo
 - run npm run build
 
 - Open the index.html in the browser.
+
+## Test with Jest
+- step 1
+install jest in your project and create test folder 
+- Add files that need to be tested in test folder.
+- write the code to test the code for each feature.
+- npm i jest --save-dev
+npm install --save-dev @babel/preset-env
+
+- run npm test
+
 
 
 ## 🤝 contributing

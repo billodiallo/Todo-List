@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import * as utility from './utility';
+import * as utility from '../src/utility';
 
 describe('toggleShowElement', () => {
   const mockElement = {
